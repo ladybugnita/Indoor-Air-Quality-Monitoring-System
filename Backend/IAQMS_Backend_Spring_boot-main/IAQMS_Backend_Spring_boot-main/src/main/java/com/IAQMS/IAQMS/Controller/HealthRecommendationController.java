@@ -14,10 +14,8 @@ import java.util.List;
 
 public class HealthRecommendationController {
 
-
     @Autowired
     public HealthRecommendationService recommendationService;
-
 
     @GetMapping("/recommend")
     public List<String> getRecommendations(@RequestParam String condition){

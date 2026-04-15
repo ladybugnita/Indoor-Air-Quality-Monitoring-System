@@ -23,8 +23,8 @@ public class AdminDetailsService implements UserDetailsService {
 
         return   org.springframework.security.core.userdetails.User
                 .withUsername(admin.getUsername())
-                .password(admin.getPassword()) // make sure it's BCrypt-hashed
-                .roles(admin.getRole()) // you can also read from admin.getRole()
+                .password(admin.getPassword())
+                .roles(admin.getRole())
                 .build();
     }
 }

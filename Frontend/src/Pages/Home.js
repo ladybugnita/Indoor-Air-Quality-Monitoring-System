@@ -1,4 +1,3 @@
-// src/components/HomeContent/HomeContent.js
 import { useNavigate } from "react-router-dom";
 import thermometerIcon from "../Assets/high-temperature.png";
 import HumidityIcon from "../Assets/humidity.png";
@@ -26,7 +25,6 @@ function Home() {
   return (
     <div className={styles.homeContainer}>
       <div className={styles.container}>
-        {/* Left Box – Slogan */}
         <div className={styles.leftBox}>
           <h1 className={styles.heading1}>Breathe by Breathe</h1>
           <h1 className={styles.heading2}>
@@ -35,8 +33,7 @@ function Home() {
           <h1 className={styles.heading3}>Healthier</h1>
           <h1 className={styles.heading4}>World.</h1>
           <p className={styles.subtext}>
-            Monitor air quality in real-time and take action for a healthier
-            life.
+            Monitor air quality in real-time and take action for a healthier life.
           </p>
           <br />
 
@@ -48,7 +45,6 @@ function Home() {
           </button>
         </div>
 
-        {/* Right Box – AQI Data */}
         <div className={styles.rightBox}>
           <div className={styles.right_IQA_Box}>
             <p className={styles.aqiValue}>IAQ :    <b>{IaqData}</b></p>
@@ -98,7 +94,6 @@ function Home() {
       </div>
       <div className={styles.AboutContainer}>
         <br />
-        {/* About Section */}
         <div className={styles.about_container}>
           <h2 className={styles.about_heading}>About Indoor AIR</h2>
           <span className={styles.about_text}>
@@ -123,22 +118,19 @@ function Home() {
             <div className={styles.solution_card}>
               <h3>Air Monitoring Devices</h3>
               <p>
-                IoT-based sensors used to detect pollutants like CO₂, ozone,
-                SO₂, and smoke in indoor environments.
+                IoT-based sensors used to detect pollutants like CO₂, ozone, SO₂, and smoke in indoor environments.
               </p>
             </div>
             <div className={styles.solution_card}>
               <h3>Real-Time Dashboard</h3>
               <p>
-                A live dashboard that visualizes IAQ values, pollutant levels,
-                and alerts users to unsafe conditions.
+                A live dashboard that visualizes IAQ values, pollutant levels,and alerts users to unsafe conditions.
               </p>
             </div>
             <div className={styles.solution_card}>
               <h3>Awareness</h3>
               <p>
-                Provides suggestions and safety measures based on indoor air
-                quality to promote health awareness.
+                Provides suggestions and safety measures based on indoor air quality to promote health awareness.
               </p>
             </div>
           </div>

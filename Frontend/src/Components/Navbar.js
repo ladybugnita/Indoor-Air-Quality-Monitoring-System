@@ -1,6 +1,4 @@
-// src/components/Navbar.js
 
-// import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 import siteIcon from "../Assets/siteIcon.png";
@@ -12,7 +10,6 @@ function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      {/* Logo on the left */}
       <div className={styles.logo}>
         <NavLink
           to="/"
@@ -24,7 +21,6 @@ function Navbar() {
         </NavLink>
       </div>
 
-      {/* Navigation links */}
       <ul className={styles.navLinks}>
         <li>
           <NavLink

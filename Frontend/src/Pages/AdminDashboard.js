@@ -20,25 +20,20 @@ export default function AdminDashboard() {
 
   const handleFeedback = async() =>{
 
-    //fetching feedback
     try{
          const response = await fetch("http://localhost:8080/iqa/feedback/latest")
          const data = await response.json();
          console.log("Latest feedback:", data);
          setFeedback([...feedback , data]);
-         // Get the latest 6 feedback entries
     }catch(error){
       console.error("Error fetching feedback:", error);
     }
     
   }
   
-
   return (
     <div className={style.container}>
-      {/* Sidebar */}
       <div className={`${style.sidebar} ${isOpen ? style.open : style.closed}`}>
-        {/* Close button */}
         <button className={style.close_btn} onClick={() => setIsOpen(false)}>
           ✖
         </button>
@@ -52,8 +47,6 @@ export default function AdminDashboard() {
         <br />
         <hr />
         <ul className={style.sidebar_menu}>
-          {/* <li><a href="#sensors">Sensors</a></li>
-          <li><a href="#feedback">Feedback</a></li> */}
           <li>
             <button className={style.feedback_btn} onClick={handleFeedback}>
               View Feedback
@@ -67,9 +60,7 @@ export default function AdminDashboard() {
         </ul>
       </div>
 
-      {/* Main Content */}
       <div className={style.content}>
-        {/* Burger Button */}
         {(!isOpen) && (
           <button className={style.burger_btn} onClick={() => setIsOpen(true)}>
             ☰
@@ -82,7 +73,6 @@ export default function AdminDashboard() {
           settings and view user feedback.
         </p>
         
-        {/* Feedback Section */}
         <div id="feedback" className={style.feedbackSection}>
           <h2>User Feedbacks</h2>
           <div className={style.feedbacksContainer}>

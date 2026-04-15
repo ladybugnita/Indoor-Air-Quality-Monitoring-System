@@ -30,18 +30,14 @@ public class AdminLoginController {
 
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@RequestBody AuthRequest request) {
-        // 1️⃣ Authenticate credentials
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
         );
 
-        // 2️⃣ Load admin details
         var adminDetails = adminDetailsService.loadUserByUsername(request.getUsername());
 
-        // 3️⃣ Generate JWT token
         String jwtToken = jwtService.generateToken(adminDetails);
 
-        // 4️⃣ Return token to frontend
         return ResponseEntity.ok(new AuthResponse(jwtToken));
     }
 

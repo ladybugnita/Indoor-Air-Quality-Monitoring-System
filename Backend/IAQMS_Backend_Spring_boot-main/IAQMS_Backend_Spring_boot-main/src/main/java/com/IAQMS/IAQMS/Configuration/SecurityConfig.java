@@ -41,13 +41,9 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                                 .anyRequest().permitAll()
-//                        .requestMatchers("/api/auth/**").permitAll() // login endpoints
-//                        .requestMatchers("/iqa/feedback/**").permitAll() // feedback endpoints
-//                        .requestMatchers("/iqa/data/**").permitAll() // sensor data endpoints
-//                        .anyRequest().hasRole("ADMIN") // everything else requires ADMIN
                 )
                 .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // JWT stateless
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
                 .addFilterBefore(new JwtAuthFilter(adminDetailsService, jwtService), UsernamePasswordAuthenticationFilter.class);
 
@@ -65,10 +61,6 @@ public class SecurityConfig {
     }
 }
 
-
-/**
- * JWT Filter: validates JWT for each request
- */
 @Component
 class JwtAuthFilter extends OncePerRequestFilter {
 

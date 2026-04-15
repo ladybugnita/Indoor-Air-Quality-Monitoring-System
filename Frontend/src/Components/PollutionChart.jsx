@@ -11,7 +11,7 @@ import {
 } from "recharts";
 
 export default function PollutionChart() {
-  const { IaqData } = useContext(IaqContext); // ✅ you’re using capital IaqData
+  const { IaqData } = useContext(IaqContext); 
   const [chartData, setChartData] = useState([]);
   const [hourlyData, setHourlyData] = useState({ hour: null, values: [] });
 
@@ -22,11 +22,10 @@ export default function PollutionChart() {
   const currentHour = now.getHours();
 
   setHourlyData((prev) => {
-    // Same hour → keep adding new value
     if (prev.hour === currentHour) {
       const updatedValues = [...prev.values, IaqData];
       const avgPPM =
-        updatedValues.reduce((sum, val) => sum + val, 0) /
+        updatedValues.reduce((sum, val) => sum + val, 0) 
         updatedValues.length;
 
       const timeLabel = currentHour + ":00";
@@ -45,7 +44,6 @@ export default function PollutionChart() {
 
       return { ...prev, values: updatedValues };
     } else {
-      // Hour has changed → save previous hour average
       if (prev.values.length > 0) {
         const avgPPM =
           prev.values.reduce((sum, val) => sum + val, 0) / prev.values.length;
@@ -53,12 +51,11 @@ export default function PollutionChart() {
 
         setChartData((prevChart) => {
           const updated = [...prevChart, { time: timeLabel, ppm: avgPPM }];
-          if (updated.length > 24) updated.shift(); // keep last 24 hours
+          if (updated.length > 24) updated.shift(); 
           return updated;
         });
       }
 
-      // Start new hour with current value
       return { hour: currentHour, values: [IaqData] };
     }
   });

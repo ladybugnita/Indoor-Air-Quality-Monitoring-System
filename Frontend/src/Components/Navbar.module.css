@@ -1,20 +1,18 @@
-/* src/components/Navbar/Navbar.module.css */
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content:space-between;
-  height: 70px; /* 🔹 Set height */
-  width: 100%; /* 🔹 Default full width */
-  background-color: #ffffff; /* Dark blue */
-  padding: 0 20px; /* Horizontal spacing */
+  height: 70px; 
+  width: 100%; 
+  background-color: #ffffff; 
+  padding: 0 20px; 
   box-sizing: border-box;
   color: rgb(0, 0, 0);
 }
 
-/* Logo styles */
 .logo img {
-  height: 45px; /* Adjusted logo size to fit 70px navbar */
+  height: 45px; 
   object-fit: contain;
 }
 
@@ -27,7 +25,6 @@
   font-family:Arial, Helvetica, sans-serif;
 }
 
-/* Center navigation links */
 .navLinks {
   display: flex;
   align-items: center;
@@ -39,7 +36,6 @@
   
 }
 
-/* Link styles */
 .navLinks a {
   text-decoration: none;
   color: #333;
@@ -54,27 +50,21 @@
   color: #0052cc;
 }
 
-/* Active link styles */
-
 .active_link {
   color: #1a76ff !important;
   font-weight: 500;
   font-family: sans-serif;
 }
 
-/* Inactive link styles */
-
 .inactive_link {
   color: #333;
 }
 
-/* Admin login on the right */
 .adminLogin img {
-  height: 26px; /* Adjusted logo size to fit 70px navbar */
+  height: 26px; 
   object-fit: contain;
 }
 
-/* Settings button and dropdown styles */
 .settingsContainer {
   position: relative;
   height: 100%;

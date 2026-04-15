@@ -10,7 +10,6 @@ export default function AdminLogin() {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-    // Add your login logic here
 
     try{
         const response = await fetch("http://localhost:8080/api/auth/login", {
@@ -33,7 +32,6 @@ export default function AdminLogin() {
            
         }else{
              const errorData = await response.json();
-            //  setMessage(errorData.message || "Login failed");
             alert("Invalid username or password!");
             console.log("Login failed" , errorData.message);
             setPassword("");
@@ -42,7 +40,6 @@ export default function AdminLogin() {
 
       }catch(error){
         console.error("Error during login:" , error);
-        // setMessage("Login failed");
       }
 
   };
@@ -98,9 +95,6 @@ export default function AdminLogin() {
                 />
                 <label>Remember me</label>
               </div>
-              {/* <a href="#" className={styles.forgotPassword}>
-                Forgot password?
-              </a> */}
             </div>
 
             <button type="submit" className={styles.loginButton}>
