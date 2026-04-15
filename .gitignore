@@ -22,7 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-application.properties
-application.properties.*
+application*.properties
+Backend/**/src/main/resources/application*.properties
 
 .idea/
