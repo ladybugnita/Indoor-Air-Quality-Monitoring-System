@@ -85,7 +85,7 @@ This project was built by a team of four students under the supervision of **Er.
 | Aatish Chaudhary | Documentation, UI/UX Design |
 | Biplov Gautam | Backend Development, Testing |
 | Jenish Bhattarai | Frontend Development, Testing |
-| Nita Dangol | Database Design, IoT Management |
+| Nita Dangol | Database Design, IoT Setup & Management |
 
 ### My Contributions (Nita Dangol)
 
