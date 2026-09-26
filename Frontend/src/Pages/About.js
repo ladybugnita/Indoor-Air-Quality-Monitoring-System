@@ -1,5 +1,5 @@
 import React from "react";
-import "./aboutus.css"; // Import external CSS
+import "./aboutus.css"; 
 import biplov from "../Assets/biplov.jpg";
 import jenish from "../Assets/jenish.jpg";
 import nita from "../Assets/nita.jpeg";
@@ -21,7 +21,6 @@ export default function IndoorAirPage() {
         </div>
       </section>
 
-      {/* About Section */}
       <section className="indoor-air-about">
         <h2 className="indoor-air-about-heading">
           About Indoor <span className="indoor-air-highlight">AIR</span>

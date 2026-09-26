@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 @Table(name = "UserFeedback")
 public class FeedbackData {
 
-    //primary key annotation
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -24,8 +23,7 @@ public class FeedbackData {
 
     @PrePersist
     protected void onCreate() {
-        this.feedbackTime = LocalDateTime.now(); // automatically set when saving
-    }
+        this.feedbackTime = LocalDateTime.now();
 
     public LocalDateTime getFeedbackTime() {
         return feedbackTime;

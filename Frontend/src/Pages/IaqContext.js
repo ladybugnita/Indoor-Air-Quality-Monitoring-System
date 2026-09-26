@@ -20,7 +20,6 @@ export const IaqProvider = ({ children }) => {
           setTemperature(data.temperature);
           setHumidity(data.humidity);
 
-          // Determine status based on ppm
           if (data.ppm < 500) setStatus("Good");
           else if (data.ppm < 600) setStatus("Moderate");
           else if (data.ppm < 700) setStatus("Unhealthy for Sensitive Groups");
@@ -37,7 +36,7 @@ export const IaqProvider = ({ children }) => {
     };
 
     fetchData();
-    const interval = setInterval(fetchData, 15000); // update every 15s
+    const interval = setInterval(fetchData, 15000); 
     return () => clearInterval(interval);
   }, []);
 

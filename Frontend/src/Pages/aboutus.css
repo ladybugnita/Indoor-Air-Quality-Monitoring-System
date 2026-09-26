@@ -126,7 +126,7 @@
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  display: block; /* optional: remove inline spacing if inside flex */
+  display: block; 
 }
 
 

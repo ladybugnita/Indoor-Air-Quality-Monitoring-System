@@ -3,7 +3,7 @@ package com.IAQMS.IAQMS.Model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "iaq_data") //table name in iaqms db
+@Table(name = "iaq_data")
 public class SensorData {
 
     @Id
@@ -16,7 +16,6 @@ public class SensorData {
     private double temperature;
     private double humidity;
 
-    // Getters and setters
     public Long getId() {
         return id;
     }

@@ -78,27 +78,6 @@ export default function HealthForm() {
 
     };
 
-    // let advice = "";
-
-    // if (
-    //   condition.toLowerCase().includes("asthma") ||
-    //   condition.toLowerCase().includes("allergy")
-    // ) {
-    //   if (severity === "Mild") {
-    //     advice =
-    //       "Avoid outdoor activities during high pollution hours and keep windows closed.";
-    //   } else if (severity === "Moderate") {
-    //     advice =
-    //       "Use an air purifier indoors and wear a mask when going outside.";
-    //   } else if (severity === "Severe") {
-    //     advice =
-    //       "Strongly avoid going outdoors, use prescribed medication, and consult your doctor.";
-    //   }
-    // } else {
-    //   advice =
-    //     "Maintain general precautions: stay hydrated, avoid heavy exercise in polluted areas, and monitor air quality daily.";
-    // }
-
   };
 
   return (
@@ -132,7 +111,7 @@ export default function HealthForm() {
             className={styles.select}
             
           >
-            <option value="">Select Gender...</option>
+            <option value="">Select Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Other">Other</option>
@@ -154,7 +133,7 @@ export default function HealthForm() {
             className={styles.select}
             
           >
-            <option value="">Select Severity...</option>
+            <option value="">Select Severity</option>
             <option value="Mild">Mild</option>
             <option value="Moderate">Moderate</option>
             <option value="Severe">Severe</option>

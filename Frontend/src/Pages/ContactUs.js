@@ -2,7 +2,6 @@ import React from "react";
 import "./ContactPage.css";
 
 function ContactPage() {
-  // State to manage form data
   const [formData, setFormData] = React.useState({
     name: "",
     phone: "",
@@ -13,7 +12,6 @@ function ContactPage() {
   const [errors, setErrors] = React.useState({});
   const [isSubmitted, setisSubmitted] = React.useState(false);
 
-  //function to validate the form data
   const validate = () => {
     const newErrors = {};
 
@@ -29,7 +27,6 @@ function ContactPage() {
     if (!formData.email) {
       newErrors.email = "Email is required";
     } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-      //regex code to validate email
       newErrors.email = "Email is not valid";
     }
     return newErrors;
@@ -42,9 +39,7 @@ function ContactPage() {
       [name]: value,
     });
 
-    // Clear the error for the field being changed
     if (isSubmitted) {
-      //validate the this field only
       const fieldError = validate()[name];
       setErrors((previousErrors) => ({
         ...previousErrors,
@@ -53,7 +48,6 @@ function ContactPage() {
     }
   };
 
-  //function to handle the form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -71,7 +65,6 @@ function ContactPage() {
       body: JSON.stringify(formData),
     });
 
-      //submit the form
       alert("Thankyou for your feedback!");
       setFormData({
         name: "",

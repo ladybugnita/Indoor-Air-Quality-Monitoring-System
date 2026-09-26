@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import siteIcon from "../Assets/siteIcon.png";
-import styles from "../Pages/Home.module.css"; // Using the existing CSS from Home.module.css
+import styles from "../Pages/Home.module.css"; 
 
 export default function Footer() {
   const navigate = useNavigate();

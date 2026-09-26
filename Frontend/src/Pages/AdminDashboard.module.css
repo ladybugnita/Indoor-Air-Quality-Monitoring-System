@@ -5,7 +5,7 @@
 }
 
 .sidebar {
-  background-color: #1e293b; /* dark blue/gray */
+  background-color: #1e293b; 
   color: white;
   height: 100vh;
   transition: width 0.3s ease-in-out;
@@ -16,12 +16,12 @@
 }
 
 .sidebar.open {
-  width: 250px; /* visible width */
+  width: 250px; 
 }
 
 .sidebar.closed {
-  width: 0; /* hidden completely */
-  padding: 0; /* remove inner space when closed */
+  width: 0; 
+  padding: 0; 
 }
 
 .close_btn {
@@ -37,7 +37,7 @@
 
 .sidebar_title {
   font-size: 20px;
-  margin-top: 40px; /* so title doesn’t overlap close button */
+  margin-top: 40px; 
   margin-bottom: 20px;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .sidebar_menu a:hover {
-  color: #38bdf8; /* light blue on hover */
+  color: #38bdf8; 
 }
 
 .content {

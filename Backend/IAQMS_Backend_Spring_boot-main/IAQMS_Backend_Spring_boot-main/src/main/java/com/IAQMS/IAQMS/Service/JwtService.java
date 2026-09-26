@@ -12,27 +12,23 @@ import java.util.Date;
 @Service
 public class JwtService {
 
-    // Generate a secure 256-bit key (HS256 requires >= 256 bits)
     private static final SecretKey SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
-    // Generate token
     public String generateToken(UserDetails userDetails) {
         return Jwts.builder()
                 .setSubject(userDetails.getUsername())
                 .claim("roles", userDetails.getAuthorities())
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60)) // 1 hour
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60))
                 .signWith(SECRET_KEY)
                 .compact();
     }
 
-    // Validate token
     public boolean validateToken(String token, UserDetails userDetails) {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
-    // Extract username
     public String extractUsername(String token) {
         return Jwts.parserBuilder()
                 .setSigningKey(SECRET_KEY)

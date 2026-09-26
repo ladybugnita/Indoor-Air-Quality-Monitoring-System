@@ -17,12 +17,10 @@ public class FeedbackController {
         this.feedbackRepository = feedbackRepository;
     }
 
-    //save feedback or form data into db
-
     @PostMapping
     public FeedbackData saveFeedbackData(@RequestBody FeedbackData feedbackData){
 
-        System.out.println("<<<----------- New feedback ----------->>>");
+        System.out.println("New feedback");
         System.out.println("Name :" +feedbackData.getName());
         System.out.println("Phone Number :" +feedbackData.getPhone());
         System.out.println("Email :" +feedbackData.getEmail());

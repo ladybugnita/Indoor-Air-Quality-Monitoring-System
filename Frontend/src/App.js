@@ -21,7 +21,6 @@ function App() {
       <IaqProvider>
 
       <Routes>
-        {/* Admin login route without footer */}
         <Route
           path="/admin"
           element={
@@ -32,7 +31,6 @@ function App() {
           }
         />
         
-        {/* All other routes with Layout (includes footer) */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home hello="hello"/>} />
           <Route path="dashboard" element={<Dashboard />} />

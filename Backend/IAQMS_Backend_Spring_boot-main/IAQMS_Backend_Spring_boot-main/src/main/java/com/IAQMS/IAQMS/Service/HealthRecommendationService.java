@@ -18,7 +18,6 @@ public class HealthRecommendationService {
             "Allergy patients should keep windows closed"
     };
 
-    // Main method to get recommendations
     public List<String> getRecommendations(String userProfile) {
         userProfile = userProfile.toLowerCase();
 
@@ -29,18 +28,15 @@ public class HealthRecommendationService {
             scores.put(item, similarity);
         }
 
-        // Sort descending by similarity
         List<String> sorted = scores.entrySet()
                 .stream()
                 .sorted((a, b) -> Double.compare(b.getValue(), a.getValue()))
                 .map(Map.Entry::getKey)
                 .toList();
 
-        // Return top 3
         return sorted.stream().limit(3).toList();
     }
 
-    // Simple cosine similarity using bag-of-words
     private double cosineSimilarity(String text1, String text2) {
         Map<String, Integer> freq1 = getWordFrequency(text1);
         Map<String, Integer> freq2 = getWordFrequency(text2);
