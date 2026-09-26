@@ -82,7 +82,7 @@ This project was built by a team of four students under the supervision of **Er.
 
 | Member | Role |
 |---|---|
-| Aatish Chaudhary | Documentation, UI/UX Design |
+| Aatish Chaudhary | UI/UX Design |
 | Biplov Gautam | Backend Development |
 | Jenish Bhattarai | Frontend Development |
 | Nita Dangol | Database Design, IoT Setup & Management |
